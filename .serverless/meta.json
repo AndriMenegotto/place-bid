@@ -1,0 +1,91 @@
+{
+  "/Users/andri/Documents/event-driven/place-bid/serverless.yml": {
+    "versionFramework": "4.33.0",
+    "servicePath": "/Users/andri/Documents/event-driven/place-bid/serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-typescript-lambda",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs20.x",
+        "region": "us-east-1",
+        "architecture": "arm64",
+        "stage": "dev",
+        "versionFunctions": true
+      },
+      "functions": {
+        "hello": {
+          "handler": "dist/index.handler",
+          "events": [
+            {
+              "httpApi": {
+                "path": "/hello",
+                "method": "get"
+              }
+            }
+          ],
+          "name": "my-typescript-lambda-dev-hello"
+        }
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs20.x",
+      "region": "us-east-1",
+      "architecture": "arm64",
+      "stage": "dev",
+      "versionFunctions": true
+    },
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "serviceRawFile": "service: my-typescript-lambda\n\nprovider:\n  name: aws\n  runtime: nodejs20.x \n  region: us-east-1 \n  architecture: arm64\n\nfunctions:\n  hello:\n    handler: dist/index.handler\n    events:\n      - httpApi:\n          path: /hello\n          method: get\n",
+    "command": [
+      "invoke"
+    ],
+    "options": {
+      "function": "hello"
+    },
+    "orgId": "ebfc0489-38bf-42a2-8aaa-6c3a5c35e7a9",
+    "orgName": "andrimenegotto",
+    "userId": "mPrvbJl2fdhDQSDVQj",
+    "userName": "andrimenegotto",
+    "serviceProviderAwsAccountId": "578949127475",
+    "serviceProviderAwsCfStackName": "my-typescript-lambda-dev",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:578949127475:stack/my-typescript-lambda-dev/f8d250d0-287a-11f1-a53f-0e81cd5d706b",
+    "serviceProviderAwsCfStackCreated": "2026-03-25T18:46:45.184Z",
+    "serviceProviderAwsCfStackUpdated": "2026-03-27T23:43:46.158Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "HelloLambdaFunctionQualifiedArn",
+        "OutputValue": "arn:aws:lambda:us-east-1:578949127475:function:my-typescript-lambda-dev-hello:6",
+        "Description": "Current Lambda function version",
+        "ExportName": "sls-my-typescript-lambda-dev-HelloLambdaFunctionQualifiedArn"
+      },
+      {
+        "OutputKey": "HttpApiId",
+        "OutputValue": "r7f0c0wmba",
+        "Description": "Id of the HTTP API",
+        "ExportName": "sls-my-typescript-lambda-dev-HttpApiId"
+      },
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "serverless-framework-deployments-us-east-1-5b771356-61fc",
+        "ExportName": "sls-my-typescript-lambda-dev-ServerlessDeploymentBucketName"
+      },
+      {
+        "OutputKey": "HttpApiUrl",
+        "OutputValue": "https://r7f0c0wmba.execute-api.us-east-1.amazonaws.com",
+        "Description": "URL of the HTTP API",
+        "ExportName": "sls-my-typescript-lambda-dev-HttpApiUrl"
+      }
+    ]
+  }
+}

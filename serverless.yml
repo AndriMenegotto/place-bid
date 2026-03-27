@@ -1,0 +1,15 @@
+service: my-typescript-lambda
+
+provider:
+  name: aws
+  runtime: nodejs20.x 
+  region: us-east-1 
+  architecture: arm64
+
+functions:
+  hello:
+    handler: dist/index.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
