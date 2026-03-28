@@ -2,7 +2,7 @@
   "name": "place-bid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "handlers/place-auction-bid.handler.js",
   "scripts": {
     "build": "tsc",
     "invoke:local": "serverless invoke -f hello",

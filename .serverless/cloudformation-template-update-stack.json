@@ -91,9 +91,9 @@
       "Properties": {
         "Code": {
           "S3Bucket": "serverless-framework-deployments-us-east-1-5b771356-61fc",
-          "S3Key": "serverless/my-typescript-lambda/dev/1774655017505-2026-03-27T23:43:37.505Z/my-typescript-lambda.zip"
+          "S3Key": "serverless/my-typescript-lambda/dev/1774658147219-2026-03-28T00:35:47.219Z/my-typescript-lambda.zip"
         },
-        "Handler": "dist/index.handler",
+        "Handler": "dist/handlers/place-auction-bid.handler",
         "Runtime": "nodejs20.x",
         "FunctionName": "my-typescript-lambda-dev-hello",
         "MemorySize": 1024,
@@ -112,14 +112,14 @@
         "HelloLogGroup"
       ]
     },
-    "HelloLambdaVersionshW0mjlW3xoxLHlGdntw3MoYXRw1r1FyIe0D79UyJU": {
+    "HelloLambdaVersionjYjygVJr1UdqWoZNhjr4TlzAnUXmdiYG9k0fDY1vKuY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "HelloLambdaFunction"
         },
-        "CodeSha256": "qMICoq2rsLg9KUKh6koQL6IYRXqucWiCo2gvYHrk704="
+        "CodeSha256": "a1UcwSAQrrGb3G4Bmlpyl3R0gjJDwMT4kSLAqVJ05AI="
       }
     },
     "HttpApi": {
@@ -228,7 +228,7 @@
     "HelloLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "HelloLambdaVersionshW0mjlW3xoxLHlGdntw3MoYXRw1r1FyIe0D79UyJU"
+        "Ref": "HelloLambdaVersionjYjygVJr1UdqWoZNhjr4TlzAnUXmdiYG9k0fDY1vKuY"
       },
       "Export": {
         "Name": "sls-my-typescript-lambda-dev-HelloLambdaFunctionQualifiedArn"

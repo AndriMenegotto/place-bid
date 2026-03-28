@@ -15,7 +15,7 @@
       },
       "functions": {
         "hello": {
-          "handler": "dist/index.handler",
+          "handler": "dist/handlers/place-auction-bid.handler",
           "events": [
             {
               "httpApi": {
@@ -45,7 +45,7 @@
       "serviceProvider": null,
       "instanceParameters": null
     },
-    "serviceRawFile": "service: my-typescript-lambda\n\nprovider:\n  name: aws\n  runtime: nodejs20.x \n  region: us-east-1 \n  architecture: arm64\n\nfunctions:\n  hello:\n    handler: dist/index.handler\n    events:\n      - httpApi:\n          path: /hello\n          method: get\n",
+    "serviceRawFile": "service: my-typescript-lambda\n\nprovider:\n  name: aws\n  runtime: nodejs20.x \n  region: us-east-1 \n  architecture: arm64\n\nfunctions:\n  hello:\n    handler: dist/handlers/place-auction-bid.handler\n    events:\n      - httpApi:\n          path: /hello\n          method: get\n",
     "command": [
       "invoke"
     ],
@@ -60,12 +60,12 @@
     "serviceProviderAwsCfStackName": "my-typescript-lambda-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:578949127475:stack/my-typescript-lambda-dev/f8d250d0-287a-11f1-a53f-0e81cd5d706b",
     "serviceProviderAwsCfStackCreated": "2026-03-25T18:46:45.184Z",
-    "serviceProviderAwsCfStackUpdated": "2026-03-27T23:43:46.158Z",
+    "serviceProviderAwsCfStackUpdated": "2026-03-28T00:35:55.973Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "HelloLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:578949127475:function:my-typescript-lambda-dev-hello:6",
+        "OutputValue": "arn:aws:lambda:us-east-1:578949127475:function:my-typescript-lambda-dev-hello:9",
         "Description": "Current Lambda function version",
         "ExportName": "sls-my-typescript-lambda-dev-HelloLambdaFunctionQualifiedArn"
       },

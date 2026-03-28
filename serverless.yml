@@ -8,7 +8,7 @@ provider:
 
 functions:
   hello:
-    handler: dist/index.handler
+    handler: dist/handlers/place-auction-bid.handler
     events:
       - httpApi:
           path: /hello
